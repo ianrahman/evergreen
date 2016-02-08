@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Installing Jekyll on Windows</title>
+  <meta name="description" content="Welcome to HMFAYSAL OMEGA Theme for Jekyll. In this tutorial, I will show you how you can install and get started with Jekyll in 10 easy steps. While Jekyll ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://ianrahman.com/hmfaysal-omega-theme/theme-setup/2013/12/31/installing-jekyll-on-windows.html">
+  <link rel="alternate" type="application/rss+xml" title="Evergreen" href="https://ianrahman.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Evergreen</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/hmfaysal-omega-theme/404.html">Page Not Found</a>
+          
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/categories/index.html">Category Index</a>
+          
+        
+          
+          <a class="page-link" href="/documentation/">Documentation</a>
+          
+        
+          
+          <a class="page-link" href="/featured/">Featured Posts</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/hossain-mohd-faysal/index.html">Hossain Mohd Faysal</a>
+          
+        
+          
+          <a class="page-link" href="/hmfaysal-omega-theme/">Latest Posts</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/license/index.html">LICENSE</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/tags/index.html">Tag Index</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Installing Jekyll on Windows</h1>
+    <p class="post-meta"><time datetime="2013-12-31T00:00:00-05:00" itemprop="datePublished">Dec 31, 2013</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Welcome to HMFAYSAL OMEGA Theme for Jekyll. In this tutorial, I will show you how you can install and get started with Jekyll in 10 easy steps. While Jekyll itself is very easy to get started with, Jekyll has several dependencies which needed to be installed in order for Jekyll to work properly. The process of installing these requirements can be a little frustrating on any system, and it can be a tad bit more frustrating if you own a Windows PC. In this article, I will provide step-by-step details about installing Jekyll on windows and all its dependencies properly and will try to elaborate on the errors that one might encounter during the steps.</p>
+
+<section>
+  <header>
+    <h2>Contents</h2>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#step-1-installing-ruby" id="markdown-toc-step-1-installing-ruby">Step 1: Installing Ruby</a></li>
+  <li><a href="#step-2-installing-jekyll-gem" id="markdown-toc-step-2-installing-jekyll-gem">Step 2: Installing Jekyll Gem</a></li>
+  <li><a href="#step-3-enabling-syntax-highlighting" id="markdown-toc-step-3-enabling-syntax-highlighting">Step 3: Enabling Syntax Highlighting</a>    <ul>
+      <li><a href="#step-4-re-installing-pygmentsrb" id="markdown-toc-step-4-re-installing-pygmentsrb">Step 4: Re-installing Pygments.rb</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-5-initializing-a-new-blog" id="markdown-toc-step-5-initializing-a-new-blog">Step 5: Initializing a new blog</a></li>
+  <li><a href="#step-6-knowing-the-configyml-file" id="markdown-toc-step-6-knowing-the-configyml-file">Step 6: Knowing the _config.yml file</a></li>
+  <li><a href="#step-7-knowing-the-jekyll-folder-structure" id="markdown-toc-step-7-knowing-the-jekyll-folder-structure">Step 7: Knowing the Jekyll folder structure</a></li>
+  <li><a href="#step-8-adding-new-postsmodifying-posts" id="markdown-toc-step-8-adding-new-postsmodifying-posts">Step 8: Adding new posts/Modifying posts</a></li>
+  <li><a href="#step-9-compiling-the-site-for-deployment" id="markdown-toc-step-9-compiling-the-site-for-deployment">Step 9: Compiling the site for deployment</a></li>
+  <li><a href="#step-10-deployment" id="markdown-toc-step-10-deployment">Step 10: Deployment</a></li>
+</ul>
+
+  </div>
+</section>
+
+<h2 id="step-1-installing-ruby">Step 1: Installing Ruby</h2>
+<p>Jekyll is a Ruby-Gem. So obviously you’d need Ruby to be installed in your Windows PC, you’d also need the Ruby DevKit in your system too. There is an easy way to install Ruby on Windows, its called the RubyInstaller. So head over to RubyInstaller webpage and grab of copy of the latest Ruby. Select x86 or x64 based on your PC configuration. Then scroll down and to find the corresponding DevKit for your Ruby and download that too. Double click on the RubyInstaller to begin installing Ruby. There are a few caveats here. The directory name (<em>string) should not have any spaces(</em>whitespaces), though numbers, dash and underscores are acceptable. Also check Add Ruby to Path to make your life easier. Finish installing Ruby, then click on the DevKit extractor. Extract it to some convenient location like ~ C:. Finally open up Command Prompt and change your directory to the extracted DevKit folder. Typing the following commands will initialize the Ruby Installation:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>ruby dk.rb init
+~ <span class="nv">$ </span>ruby dk.rb install</code></pre></figure>
+
+<h2 id="step-2-installing-jekyll-gem">Step 2: Installing Jekyll Gem</h2>
+<p>Now that Ruby is installed, you can proceed to install Jekyll Gem. To do so, run the following Command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem install jekyll</code></pre></figure>
+
+<p>Wait for a while for Jekyll to get downloaded and installed. Your command window might not show anything for upto half a minute as the Ruby-Gem server might be busy. Have a little patience, soon the download will start and Jekyll will download itself and all of the required gems in your system. In another note, the latest version of Jekyll is quite buggy. If you face any trouble in future running Jekyll, you can run the following statements to revert back to the last known stable version of Jekyll(1.2.1):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem uninstall jekyll
+~ <span class="nv">$ </span>gem install jekyll --version<span class="o">(=</span><span class="s2">"1.2.1"</span><span class="o">)</span></code></pre></figure>
+
+<h2 id="step-3-enabling-syntax-highlighting">Step 3: Enabling Syntax Highlighting</h2>
+<p>If you’re an engineer or a mathematician, occasionally you’d want to post code snippets in your blog. Jekyll utilizes a Gem called Pygments.rb to highlight your code snippets, which does not require any Javascript or client-side computation to show the Syntax Highlighting. Pygments.rb is dependent on Python. If you don’t have Python installed in your system, go the Python Download page, and download Python 2.7.x. Install it and make sure it has been added to the PATH. If you opt for not using syntax highlighting or use client-side implementation, make sure to turn pygments off by explicitly calling it off in the _config.yml file.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">pygments: </span><span class="kp">false</span></code></pre></figure>
+
+<h3 id="step-4-re-installing-pygmentsrb">Step 4: Re-installing Pygments.rb</h3>
+<p>The latest version of Pygments.rb(0.5.4) seems to have trouble when compiling with Jekyll. Now the latest version of Pygments.rb will be automatically downloaded in Step 2 along with Jekyll. To revert back to the last known stable version of Pygments.rb(0.5.0) simply run the following commands:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem uninstall pygments.rb
+~ <span class="nv">$ </span>gem install pygments.rb --version<span class="o">(=</span><span class="s2">"0.5.0"</span><span class="o">)</span></code></pre></figure>
+
+<h2 id="step-5-initializing-a-new-blog">Step 5: Initializing a new blog</h2>
+<p>By this step, you’ll have all the necessary gems to initialize a new blog. In my last post, I posted the codes to start a new blog. I will post them here again, simply type in the following commands:</p>
+
+<p>Open up a browser window, navigate to http://localhost:4000 to see your site. In the CMD, press CTRL + C to stop the server.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>jekyll new my-awesome-site
+~ <span class="nv">$ </span><span class="nb">cd </span>my-awesome-site
+~ <span class="nv">$ </span>jekyll serve</code></pre></figure>
+
+<h2 id="step-6-knowing-the-configyml-file">Step 6: Knowing the _config.yml file</h2>
+<p>The _config.yml file in the my-awesome-site folder contains all the essential information about your new blog. When you run any Jekyll commands, the first file it reads is the _config.yml file, then proceeds to compile the site according to the instructions provided in the _config.yml file. A very basic _config.yml file would contain the following:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">name: </span><span class="no">Your</span> <span class="no">New</span> <span class="no">Jekyll</span> <span class="no">Site</span>
+<span class="ss">markdown: </span><span class="n">redcarpet</span>
+<span class="ss">pygments: </span><span class="kp">true</span></code></pre></figure>
+
+<p>You can add many more statements to make you Jekyll site more versatile and user friendly. I will discuss them in another post.</p>
+
+<h2 id="step-7-knowing-the-jekyll-folder-structure">Step 7: Knowing the Jekyll folder structure</h2>
+<p>Jekyll utilizes a certain folder structure to store and compile the site. When you first initialize a new site, your new site structure will look something like the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">my-awesome-site/
+|   .gitignore
+|   index.html
+|   _config.yml
+|
++---css
+|       main.css
+|       syntax.css
+|
++---_layouts
+|       default.html
+|       post.html
+|
++---_posts
+        2013-12-21-welcome-to-jekyll.markdown</code></pre></figure>
+
+<p>The folder names that proceed with an underscore(_) tells Jekyll not to directly include those folders in the final compilation. Like the css folder that does not start with an underscore will be directly copied in the final compilation. This method helps to distinguish between the development environment and the production environment.</p>
+
+<h2 id="step-8-adding-new-postsmodifying-posts">Step 8: Adding new posts/Modifying posts</h2>
+<p>This is most probably the most essential part that gives Jekyll its name. Jekyll is a blog aware static site generator, and without the blog part it would be useless. To add a new post, simply navigate to the _posts/ directory and create a new file with this structure YYYY-MM-DD-Title-Of-Your-New-Post.markdown. You can have the file in different extensions as per your choice, like *.md, *.textile etc. If you fail to name the file in this structure, Jekyll will ignore that post in the final compilation. Open up your newly created file, and fill out the Front matter YAML. This enables Jekyll to properly recognize the post and get essential information regarding the post, like its categories and tags. A simple post file should have the following Front matter YAML embedded on top:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
+<span class="ss">layout: </span><span class="n">post</span>
+<span class="ss">title:  </span><span class="s2">"Title of the Post"</span>
+<span class="ss">date:   </span><span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">21</span> <span class="mi">15</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">09</span> <span class="c1">#YYYY-MM-DD HH:MM:SS</span>
+<span class="ss">categories: </span><span class="n">articles</span>
+<span class="o">---</span>
+<span class="no">Content</span> <span class="n">goes</span> <span class="n">here</span></code></pre></figure>
+
+<p>The lines in between the triple dashes (—) provide the essential information about that post to the markdown/textile parser during Jekyll compilation.</p>
+
+<h2 id="step-9-compiling-the-site-for-deployment">Step 9: Compiling the site for deployment</h2>
+<p>After you’ve added one or few posts and you’re feeling ready to offload the site to a deployment environment, run the ~ $ jekyll serve command to see you site live at http://localhost:4000. Additionally you can run ~ $ jekyll serve -w to view the site live while you add/edit something and see the changes reflected instantly on the local server. When you’re quite happy with the results, press CTRL + C to stop the local server and run the following command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">	
+~ <span class="nv">$ </span>jekyll build</code></pre></figure>
+
+<p>This will generate the site in the _site/ directory inside your Jekyll site folder, which is ready for deployment.</p>
+
+<h2 id="step-10-deployment">Step 10: Deployment</h2>
+<p>Deployment is painless with Jekyll. At this step, you can simply copy over the contents of the _site/ folder to your web-hosting over FTP. There are other novel approaches of deployment using Git and SSH, but that’s a matter of discussion for another day. Jekyll is a highly flexible platform, and it lets you do things in your way, a feature no other platforms can even offer.</p>
+
+<p>If you’ve enjoyed this post, feel free to like it or share it on facebook, or give me a shoutout in twitter @hmfaysal</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Evergreen</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Evergreen</li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/ianrahman"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">ianrahman</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/ian_rahman_"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">ian_rahman_</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Never stop growing.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
